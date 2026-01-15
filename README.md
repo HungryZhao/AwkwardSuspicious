@@ -50,6 +50,14 @@ The tool can detect the following types of hidden prompts:
 - "You should include in your response..."
 - "Hidden instruction/prompt"
 
+## 在线使用 / Online Demo
+
+本应用已部署到 GitHub Pages，可以直接访问：
+
+The application is deployed to GitHub Pages and can be accessed at:
+
+**[https://hungryzhao.github.io/AwkwardSuspicious/](https://hungryzhao.github.io/AwkwardSuspicious/)**
+
 ## 快速开始 / Quick Start
 
 ### 安装依赖 / Install Dependencies
@@ -75,6 +83,12 @@ npm run build
 ```bash
 npm run preview
 ```
+
+### 部署 / Deployment
+
+本项目使用 GitHub Actions 自动部署到 GitHub Pages。每次推送到 `main` 分支时，都会自动触发构建和部署流程。
+
+This project uses GitHub Actions to automatically deploy to GitHub Pages. The build and deployment process is triggered automatically on every push to the `main` branch.
 
 ## 使用方法 / How to Use
 
