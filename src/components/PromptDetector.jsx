@@ -3,7 +3,7 @@ import * as pdfjsLib from 'pdfjs-dist'
 import mammoth from 'mammoth'
 
 // Configure PDF.js worker
-pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`
+pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`
 
 function PromptDetector({ file, onDetectionComplete, onStartProcessing }) {
   useEffect(() => {
@@ -100,12 +100,19 @@ function PromptDetector({ file, onDetectionComplete, onStartProcessing }) {
   }
 
   const checkIfHidden = (item) => {
-    // Check if text has white or transparent color
+    // Check if text has very small or zero font size
     if (item.transform) {
-      const fontSize = Math.abs(item.transform[0])
+      // Font size can be calculated from transform matrix
+      // transform[0] and transform[3] are horizontal and vertical scaling
+      const fontSize = Math.sqrt(item.transform[0] * item.transform[0] + item.transform[1] * item.transform[1])
       if (fontSize < 1) {
         return 'font-size-zero'
       }
+    }
+    
+    // Alternative: use item.height if available
+    if (item.height !== undefined && item.height < 1) {
+      return 'font-size-zero'
     }
     
     // Check for white or near-white text color
