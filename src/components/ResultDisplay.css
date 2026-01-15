@@ -1,0 +1,224 @@
+.result-container {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-container.error {
+  background: #fff5f5;
+  border: 2px solid #fc8181;
+}
+
+.result-container h3 {
+  margin-top: 0;
+  color: #2d3748;
+  font-size: 1.75rem;
+}
+
+.result-container h4 {
+  color: #4a5568;
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.summary-section {
+  margin: 1.5rem 0;
+}
+
+.summary-box {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: #f7fafc;
+  border-left: 4px solid #cbd5e0;
+}
+
+.summary-box.success {
+  background: #f0fff4;
+  border-left-color: #48bb78;
+}
+
+.summary-box.warning {
+  background: #fffaf0;
+  border-left-color: #ed8936;
+}
+
+.summary-icon {
+  font-size: 3rem;
+}
+
+.summary-text h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.summary-text p {
+  margin: 0;
+  color: #718096;
+}
+
+.prompts-section {
+  margin: 2rem 0;
+}
+
+.prompt-item {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prompt-header {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.prompt-number {
+  background: #667eea;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.prompt-type {
+  background: #e2e8f0;
+  color: #4a5568;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.prompt-page {
+  background: #fed7d7;
+  color: #c53030;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.prompt-content,
+.prompt-context,
+.prompt-reason {
+  margin: 1rem 0;
+}
+
+.prompt-content strong,
+.prompt-context strong,
+.prompt-reason strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+}
+
+.prompt-content pre,
+.prompt-context pre {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 1rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.prompt-reason {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.actions-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #f7fafc;
+  border-radius: 8px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.download-btn {
+  flex: 1;
+  min-width: 200px;
+  padding: 1.25rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  line-height: 1.4;
+}
+
+.download-btn.primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.download-btn.secondary {
+  background: #48bb78;
+  color: white;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-subtitle {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-top: 0.25rem;
+}
+
+.preview-section {
+  margin: 2rem 0;
+}
+
+.preview-section details {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.preview-section summary {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: #4a5568;
+  user-select: none;
+}
+
+.preview-section summary:hover {
+  background: #e9ecef;
+}
+
+.text-preview {
+  padding: 1.5rem;
+  margin: 0;
+  max-height: 400px;
+  overflow-y: auto;
+  background: white;
+  border-top: 1px solid #dee2e6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
